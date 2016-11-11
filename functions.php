@@ -12,14 +12,18 @@ function my_theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
+/**
+ * Enqueue scripts and styles.
+ */
+function together_scripts() {
 
-  /**
-	 * Add Custom Logo Support
-	 */
-	add_theme_support( 'custom-logo' );
+	// Enqueue simply Countdown
+	wp_enqueue_script( 'simplyCountdown', get_template_directory_uri() . '/js/simplyCountdown.min.js', array( 'jquery' ), '', '' );
+
+}
+add_action( 'wp_enqueue_scripts', 'together_scripts' );
 
 
-  // Enqueue simply Countdown
-  wp_enqueue_script( 'simplyCountdown', get_template_directory_uri() . '/js/simplyCountdown.min.js', array( 'jquery' ), '', '' );
+
 
 ?>
