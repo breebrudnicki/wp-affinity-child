@@ -1,16 +1,7 @@
 <?php
-	$date = esc_attr( get_theme_mod( 'dt_countdown_setting' ) );
-  $currentDate = getdate();
-  $currentDate_f = $currentDate['year'] . "-" . $currentDate['mon'] . "-" . $currentDate['mday'];
-  //logic to get days left
-  $startTimeStamp = strtotime($currentDate_f);
-	$endTimeStamp = strtotime($date);
-  $timeDiff = abs($endTimeStamp - $startTimeStamp);
-  $numberDays = $timeDiff / 86400;  // 86400 seconds in one day
-	// and you might want to convert to integer
-  $daysleft = intval($numberDays);
-
- ?>
+ $dt_countdown_date = esc_attr( get_theme_mod( 'dt_countdown_setting' ) );
+ $date = date( 'F d, Y', strtotime( $dt_countdown_date ));
+?>
 
  <div class="header-wrapper clear">
  	<div class="site-branding">
@@ -37,11 +28,30 @@
 		<?php endif; ?>
     <div class="dt-wedding-date">
       <p class="site-description">
-        <?php $dt_countdown_date = esc_attr( get_theme_mod( 'dt_countdown_setting' ) ); echo date( 'l, F d, Y', strtotime( $dt_countdown_date )); ?>
+        <?php echo date( 'l, F d, Y', strtotime( $dt_countdown_date )); ?>
       </p>
-			<p class="site-description">
-				<?php echo $daysleft; ?> days
-			</p>
+    </div>
+    <div>
+      <div class="countdown-container">
+        <div id="clockdiv">
+          <div>
+            <span class="days"></span>
+            <div class="smalltext">Days</div>
+          </div>
+          <div>
+            <span class="hours"></span>
+            <div class="smalltext">Hours</div>
+          </div>
+          <div>
+            <span class="minutes"></span>
+            <div class="smalltext">Minutes</div>
+          </div>
+          <div>
+            <span class="seconds"></span>
+            <div class="smalltext">Seconds</div>
+          </div>
+        </div>
+      </div>
     </div>
 
 	</div><!-- .site-description-wrapper -->

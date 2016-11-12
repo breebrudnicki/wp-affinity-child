@@ -15,64 +15,35 @@
 /*--------------------------------------------------------------
 # Wedding Countdown
 --------------------------------------------------------------*/
-.dt-wedding-date {
-	font-size: 20px;
-	font-weight: 300;
-	margin-top: 15px;
+.countdown-container {
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-.dt-wedding-countdown {
-	text-align: center;
-	position: absolute;
-	bottom: 80px;
-	left: 0;
-	width: 100%;
-}
-
-.simply-section {
-	width: 96px;
-	margin: 0 20px;
-	position: relative;
-	display: inline-block;
+#clockdiv{
 	color: #fff;
-	font-size: 24px;
-}
-
-.simply-amount {
-	background: rgba(0,0,0,.4);
-	border-radius: 50%;
-	width: 64px;
-	height: 64px;
-	padding-top: 17px;
 	display: inline-block;
-	font-weight: 300;
-}
-
-.simply-word {
-	font-size: 14px;
-	font-weight: 300;
-	margin-top: 10px;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	display: block;
-}
-
-.dt-scroll-down {
-	position: absolute;
-	left: 50%;
-	bottom: 20px;
-	width: 48px;
-	height: 48px;
-	margin-left: -24px;
+	font-weight: 100;
 	text-align: center;
-	font-size: 48px;
-	color: rgba(255,255,255,.5);
+	font-size: 30px;
 }
 
-.dt-scroll-down:hover {
-	padding-top: 8px;
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 10%;
+	background: rgba(0, 0, 0, 0.6);
+	display: inline-block;
 }
 
-.dt-scroll-down a {
-	color: rgba(255,255,255,.5);
+#clockdiv div > span{
+	padding: 15px;
+  font-size: 1.5em;
+  line-height: .6;
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
 }
