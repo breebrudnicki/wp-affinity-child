@@ -11,6 +11,73 @@
  Tags:         wedding
  Text Domain:  affinity-child
 */
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Typography
+## Site Header
+# Wedding Countdown
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+#infinite-handle span,
+input,
+select,
+textarea {
+  font-family: 'Raleway', sans-serif;
+  /*FONT FAMILY*/
+}
+
+h2, h3, h4, h5, h6 {
+/*FONT FAMILY*/
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+}
+
+h1 {
+  font-style: normal;
+  font-family: 'Great Vibes', cursive;
+}
+
+/*--------------------------------------------------------------
+## Site Header
+--------------------------------------------------------------*/
+
+.site-description {
+  /*font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  border: none;
+  font-size: 2rem;
+  margin: 0px;
+  padding: 0px;*/
+  display: none;
+}
+.site-name a {
+  font-family: 'Great Vibes', cursive;
+  font-size: 6rem;
+  text-decoration: none;
+}
+.site-name a:hover {
+  cursor: pointer;
+}
+.site-name {
+  margin: 0;
+  text-align: center;
+}
+.wedding-date {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  margin: 0;
+  text-align: center;
+  font-weight: normal;
+  font-size: 18px;
+  font-size: 2.5rem;
+
+}
 
 /*--------------------------------------------------------------
 # Wedding Countdown
@@ -45,5 +112,55 @@
 
 .smalltext{
 	padding-top: 5px;
-	font-size: 16px;
+	font-size: 1rem;
+}
+
+@media screen and (min-width: 46em) {
+  .site-name a {
+    font-size: 6rem;
+    color: #e8e9ea;
+  }
+  .wedding-date {
+    color: #e8e9ea;
+  }
+}
+@media screen and (min-width: 58em) {
+  .site-name a {
+    font-size: 7.5rem;
+    line-height: normal;
+  }
+}
+
+@media screen and (max-width: 37em) {
+  .site-name a {
+    font-size: 4.8rem;
+  }
+  .wedding-date {
+    font-size: 1.9rem;
+  }
+  .smalltext{
+    font-size: .8rem;
+  }
+  #clockdiv div > span{
+  	padding: 10px;
+    font-size: 1.2em;
+    line-height: .4;
+  }
+}
+
+@media screen and (max-width: 29em) {
+  .site-name a {
+    font-size: 3.2rem;
+  }
+  .wedding-date {
+    font-size: 1.5rem;
+  }
+  .smalltext{
+    font-size: .6rem;
+  }
+  #clockdiv div > span{
+    padding: .1em;
+    font-size: 1em;
+    line-height: .3;
+  }
 }

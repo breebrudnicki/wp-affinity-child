@@ -20,14 +20,14 @@
 		<?php affinity_the_site_logo(); ?>
 		<?php $name = get_bloginfo( 'name', 'display');
 			if ( $name || is_customize_preview() ) : ?>
-				<p class="site-description"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $name; /* WPCS: xss ok. */ ?></a></p>
+				<p class="site-name"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $name; /* WPCS: xss ok. */ ?></a></p>
 			<?php endif; ?>
 		<?php $description = get_bloginfo( 'description', 'display' );
 			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $description; /* WPCS: xss ok. */ ?></a></p>
+				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 		<?php endif; ?>
     <div class="dt-wedding-date">
-      <p class="site-description">
+      <p class="wedding-date">
         <?php echo date( 'l, F d, Y', strtotime( $dt_countdown_date )); ?>
       </p>
     </div>

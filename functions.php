@@ -14,6 +14,15 @@ add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
 /*
 *
+* ENQUE FONTS
+*/
+function bree_fonts() {
+  wp_enqueue_style('bree-carrick-google-fonts', 'https://fonts.googleapis.com/css?family=Great+Vibes|Raleway');
+}
+add_action( 'wp_enqueue_scripts', 'bree_fonts' );
+
+/*
+*
 * ENQUE COUNTDOWN JS
 */
 function enqueue_countdown() {
